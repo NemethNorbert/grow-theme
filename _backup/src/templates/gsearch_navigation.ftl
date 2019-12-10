@@ -1,4 +1,4 @@
-<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone")>
+<#assign gsearch_navigation_preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone"})>
 
 <div aria-expanded="false" class="collapse navbar-collapse" id="navigationCollapse">
 	<#if has_navigation && is_setup_complete>
@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="navbar-right">
-				<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
+				<@liferay.navigation_menu default_preferences="${gsearch_navigation_preferences}" />
 			</div>
 		</nav>
 	</#if>
